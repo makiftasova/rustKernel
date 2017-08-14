@@ -25,7 +25,7 @@ pub extern "C" fn rust_main(multiboot_information_address: usize) {
     println!("Memory Areas:");
     for area in memory_map_tag.memory_areas() {
         println!(
-            "\tstart: 0x{:x}, length: 0x{:x}",
+            "\tstart: 0x{:x},\tlength: 0x{:x}",
             area.base_addr,
             area.length
         );
@@ -38,7 +38,7 @@ pub extern "C" fn rust_main(multiboot_information_address: usize) {
     println!("Kenel sections:");
     for section in elf_sections_tag.sections() {
         println!(
-            "\taddr: 0x{:x}, size: 0x{:x}, flags: 0x{:x}",
+            "\taddr: 0x{:x},\tsize: 0x{:x},\tflags: 0x{:x}",
             section.addr,
             section.size,
             section.flags
@@ -78,7 +78,7 @@ pub extern "C" fn rust_main(multiboot_information_address: usize) {
 
     for i in 0.. {
         if let None = frame_allocator.allocate_frame() {
-            println!("allocated {} frames", i);
+            println!("\tallocated {} frames", i);
             break;
         }
     }

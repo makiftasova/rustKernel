@@ -49,6 +49,8 @@ struct ScreenChar {
 
 const BUFFER_HEIGHT: usize = 25;
 const BUFFER_WIDTH: usize = 80;
+const TAB_LEN: usize = 4;
+
 
 struct Buffer {
     chars: [[Volatile<ScreenChar>; BUFFER_WIDTH]; BUFFER_HEIGHT],
@@ -67,21 +69,23 @@ impl Writer {
         match byte {
             b'\n' => self.new_line(),
             b'\t' => {
-                for _ in 0..4 {
-                    if self.column_position >= BUFFER_WIDTH {
-                        self.new_line();
-                        break;
+
+                let num_spaces = TAB_LEN - (self.column_position % TAB_LEN);
+
+                if self.column_position + num_spaces >= BUFFER_WIDTH {
+                    self.new_line();
+                } else {
+                    for _ in 0..num_spaces {
+                        let row = BUFFER_HEIGHT - 1;
+                        let col = self.column_position;
+                        let color_code = self.color_code;
+
+                        self.buffer().chars[row][col].write(ScreenChar {
+                            ascii_character: b' ',
+                            color_code: color_code,
+                        });
+                        self.column_position += 1;
                     }
-
-                    let row = BUFFER_HEIGHT - 1;
-                    let col = self.column_position;
-                    let color_code = self.color_code;
-
-                    self.buffer().chars[row][col].write(ScreenChar {
-                        ascii_character: b' ',
-                        color_code: color_code,
-                    });
-                    self.column_position += 1;
                 }
             }
             byte => {
