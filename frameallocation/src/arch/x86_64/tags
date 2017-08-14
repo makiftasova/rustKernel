@@ -1,0 +1,24 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+bits	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^bits 32$/;"	l	language:Asm
+bits	/home/makiftasova/kernel-projets/rustKernel/setuprust/src/arch/x86_64/long_mode_init.asm	/^bits 64$/;"	l	language:Asm
+check_cpuid	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^check_cpuid:$/;"	l	language:Asm
+check_longmode	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^check_longmode:$/;"	l	language:Asm
+check_multiboot	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^check_multiboot:$/;"	l	language:Asm
+enable_paging	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^enable_paging:$/;"	l	language:Asm
+error	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^error:$/;"	l	language:Asm
+extern	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^extern long_mode_start$/;"	l	language:Asm
+gdt64	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^gdt64:$/;"	l	language:Asm
+global	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^global start$/;"	l	language:Asm
+global	/home/makiftasova/kernel-projets/rustKernel/setuprust/src/arch/x86_64/long_mode_init.asm	/^global long_mode_start$/;"	l	language:Asm
+long_mode_start	/home/makiftasova/kernel-projets/rustKernel/setuprust/src/arch/x86_64/long_mode_init.asm	/^long_mode_start:$/;"	l	language:Asm
+p2_table	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^p2_table:$/;"	l	language:Asm
+p3_table	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^p3_table:$/;"	l	language:Asm
+p4_table	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^p4_table:$/;"	l	language:Asm
+section	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^section .bss$/;"	l	language:Asm
+section	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^section .rodata$/;"	l	language:Asm
+section	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^section .text$/;"	l	language:Asm
+section	/home/makiftasova/kernel-projets/rustKernel/setuprust/src/arch/x86_64/long_mode_init.asm	/^section .text$/;"	l	language:Asm
+setup_pagetables	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^setup_pagetables:$/;"	l	language:Asm
+stack_bottom	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^stack_bottom:$/;"	l	language:Asm
+stack_top	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^stack_top:$/;"	l	language:Asm
+start	/home/makiftasova/kernel-projets/rustKernel/frameallocation/src/arch/x86_64/boot.asm	/^start:$/;"	l	language:Asm

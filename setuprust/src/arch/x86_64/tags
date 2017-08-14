@@ -1,0 +1,5 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+bits	/home/makiftasova/kernel-projets/rustKernel/setuprust/src/arch/x86_64/long_mode_init.asm	/^bits 64$/;"	l	language:Asm
+global	/home/makiftasova/kernel-projets/rustKernel/setuprust/src/arch/x86_64/long_mode_init.asm	/^global long_mode_start$/;"	l	language:Asm
+long_mode_start	/home/makiftasova/kernel-projets/rustKernel/setuprust/src/arch/x86_64/long_mode_init.asm	/^long_mode_start:$/;"	l	language:Asm
+section	/home/makiftasova/kernel-projets/rustKernel/setuprust/src/arch/x86_64/long_mode_init.asm	/^section .text$/;"	l	language:Asm
