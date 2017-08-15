@@ -152,8 +152,14 @@ impl ActivePageTable {
 
         let frame = p1[page.p1_index()].pointed_frame().unwrap();
         p1[page.p1_index()].set_unused();
+
+        use x86_64::instructions::tlb;
+        use x86_64::VirtualAddress;
+        tlb::flush(VirtualAddress(page.start_address()));
+
+
         // TODO free p1, p2 p3 tables if not empty
-        allocator.deallocate_frame(frame);
+        //allocator.deallocate_frame(frame);
     }
 }
 
@@ -168,10 +174,10 @@ where
     println!("begin allocation addr: 0x{:x}", addr);
 
     let page = Page::containing_address(addr);
-    /* let frame = allocator.allocate_frame().expect(
+    let frame = allocator.allocate_frame().expect(
         "Can't allocate new frame",
-    );*/
-    let frame = allocator.allocate_frame().unwrap();
+    );
+
     println!(
         "None = {:?}, map to {:?}",
         page_table.translate(addr),
