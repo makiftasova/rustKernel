@@ -1,6 +1,7 @@
 #![feature(lang_items)]
 #![feature(const_fn)]
 #![feature(unique)]
+#![feature(const_unique_new)]
 #![no_std]
 
 extern crate volatile;
